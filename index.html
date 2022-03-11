@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+         <!--Establish title page and meta info tags, including viewport tag for responsive elements. w3schools reference: https://www.w3schools.com/html/html_head.asp -->
+        <!--NOTE: All intsances of 4 chosen additional site items marked throughout in comments. To find easily, search for ***, which marks where the code for each-->
+        <title>Ridley Soudack</title>
+        <meta charset='utf-8'>
+        <meta name="author" content="Ridley Soudack">
+        <meta name="keywords" content="GIS, ESRI, Cartography">
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+        <!--Link to stylesheet, and link stylesheet for google font usage (from w3schools: https://www.w3schools.com/css/css_font_google.asp)-->
+        <link rel ='stylesheet' href='https://fonts.googleapis.com/css?family=Amiri'>
+        <link rel='stylesheet' href='styles.css'>
+    </head>
+    <body>
+        <header class='wrap-flex'> <!--This header element is a flexbox container that contains my site title (my name) and my navbar. More details on the styling and reference for these in my CSS comments.-->
+            <div class='header-flex-left'> <!-- This flexbox contains my site title-->
+            <h1> <!--I used h1 for my website title-->
+                Ridley Soudack
+            </h1>
+            </div>
+            <div class = 'header-flex-right'> <!--This flexbox contains my navbar-->
+                <ul class = 'navbar-list'><!-- *** DELIVERABLE - NAVBAR STYLING: This list is set up as my navbar, per w3schools. More information on styling and reference in CSS comments.-->
+                    <li> <!--This list item is my first navbar link.-->
+                        <a class='navbar-link' id = 'active' href='index.html'>About Me</a> <!--This link is the button for my current page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li> <!--This list item is my second navbar link.-->
+                        <a class='navbar-link' href = 'portfolio.html'>Portfolio</a> <!--This link links to my other page.-->
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="wrap-flex"> <!--This div element is a flexbox container that contains my introductory paragraph and personal photo.-->
+            <div class='topline-flex-left'> <!--This flexbox contains my introductory paragraphs.-->
+                <p class='topline'>
+                    Looking to draw more out of your data? Let me get you there.
+                </p>
+                <p class='topline'>
+                    My name is Ridley Soudack. I make maps that tell stories and breathe life into geospatial data. I have experience working with the suite of ESRI products, a number of relational database management systems, Python, and SQL.
+                </p>
+            </div>
+            <div class='topline-flex-right'> <!-- *** DELIVERABLE - UNIQUE IMAGE 1: This flexbox contains my personal photo.-->
+                <img class='portrait' src='images/me.jpg' alt='Ridley Soudack Photo'> 
+            </div>
+        </div>
+        <h2> <!--H2 is used to distinguish the work experience and education sections-->
+            Work Experience
+        </h2>
+            <h3> <!--h3 is used to distinguish different job positions I have held.-->
+                Project Manager - Human Contact
+            </h3>
+            <ul class='resume'> <!--The resume list class is used for bullets within my work experience/education sections.-->
+                <li class='resume-item'> <!--Each resume list item here represents a different skill I developed at the stated position.-->
+                    Experience managing teams and projects for a rapidly-growing creative and events agency, working with clients such as Shoppers Drug Mart, Home Hardware, and Japan Tobacco International
+                </li>
+                <li class='resume-item'>
+                    Tradeshow manager for corporate conferences, responsible for sponsorship campaigns totalling over $900,000 in sponsor commitment
+                </li>
+                <li class='resume-item'>
+                    Confident working as primary project manager for creative projects, communicating with clients and managing project quoting and invoicing
+                </li>
+                <li class='resume-item'>
+                    Technical experience performing Google Analytics data analysis across a range of client platforms
+                </li>
+            </ul>
+            <h3> <!--h3 is used to distinguish different job positions I have held.-->
+                English as a Second Language Teacher - Royal Ivy Academy
+            </h3>
+            <ul class='resume'> <!--The resume list class is used for bullets within my work experience/education sections.-->
+                <li class= 'resume-item'> <!--Each resume list item here represents a different skill I developed at the stated position.-->
+                    Taught a large class of kindergarten-aged ESL students, and developed a high level of English comprehension and literacy across the class
+                </li>
+                <li class = 'resume-item'>
+                    Designed and implemented a comprehensive curriculum for the 2018-19 school year.
+                </li>
+                <li class = 'resume-item'>
+                    Produced and directed a smash hit rendition of The Three Little Pigs.
+                </li>
+            </ul>
+        <h2> <!--h2 is used to distinguish the work experience and education sections-->
+            Education
+        </h2>
+        <ul class="resume"> <!--The resume list class is used for bullets within my work experience/education sections.-->
+            <li class='resume-item'>
+                <div class='wrap-flex'> <!--This flexbox div allows me to rearrange the text for my education section slightly on mobile screens.-->
+                    <p class='education-flex-left'>GIS Applications Specialist (Ongoing)</p>
+                    <p class='education-flex-right'>Fleming College, ON</p>
+                </div>
+            </li>
+            <li class='resume-item'>
+                <div class='wrap-flex'> <!--This flexbox div allows me to rearrange the text for my education section slightly on mobile screens.-->
+                    <p class='education-flex-left'>Bachelor of Arts - Sociology</p>
+                    <p class='education-flex-right'>Durham University, UK</p>
+                </div>
+            </li>
+        </ul>
+        <footer> <!--This footer block contains another navigation button, my external links, to my Twitter and LinkedIn pages.-->
+            <p class='bottomnav'>
+                <a href='portfolio.html' title='portfolio'>Portfolio &gt;</a> <!-- This link proceeds to my portfolioo page. Encoding the greater than sign I use as an arrow here to prevent any html errors.  -->
+            </p>
+            <div class='flex-socials'>
+                <div><!-- *** DELIVERABLE - EXTERNAL LINK 1: This div contains an image which links to my LinkedIn, with target=_blank to open in a new tab (per w3schools: https://www.w3schools.com/tags/att_a_target.asp).-->
+                    <a href='https://www.linkedin.com/in/ridley%2Dsoudack%2D1757081b4/' target='_blank' title='LinkedIn'> <!--Please note that this link is encoded properly, but some browsers seem to automatically un-encode the dashes.-->
+                        <img class='socials' src='images/LinkedIn.png' alt='LinkedIn'> <!-- *** DELIVERABLE - UNIQUE IMAGE 2: Image sourced from LinkedIn brand toolkit: https://brand.linkedin.com/downloads -->
+                    </a>
+                </div>
+                <div> <!--- *** DELIVERABLE - EXTERNAL LINK 2: This div contains an image which links to my Twitter, with target=_blank to open in a new tab.-->
+                    <a href='https://twitter.com/RidleySoudack' target='_blank' title='Twitter'>
+                    <img class='socials' src='images/Twitter.png' alt='Twitter'> <!-- *** DELIVERABLE - UNIQUE IMAGE 3: Image sourced from Twitter brand toolkit: https://about.twitter.com/en/who-we-are/brand-toolkit -->
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

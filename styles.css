@@ -1,0 +1,324 @@
+/* CSS Document */
+
+
+/* || General Styling */
+
+/* Using relative styling. This selector defines body attributes as well as default type rules*/
+body {
+    background-color:ivory;
+    font-family: 'Amiri', Times, serif;
+    font-size: 100%; /*Font size set to 100% in body and then kept relative through 'em' in all block elements for accessibility, per w3Schools' best practices for safe font sizing: https://www.w3schools.com/css/css_font_size.asp.*/
+    max-width: 1000px; /* I set up a max width for my body because I didn't like how my page looked when it stretched too far. */
+    margin: auto;
+    padding:40px;
+}
+
+/* h1 is used for my name, which I want to feature most prominently on both of my pages. */
+h1 {
+    font-size: 3em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* h2 is used as the header for subsections of my site - Work Experience, Education, and Portfolio */
+h2 {
+    font-size: 2.5em;
+    margin: 3% 0% 0%;
+    padding:0%;
+}
+
+/* h3 is used as a subheader to denote specific positions I have held and education I have completed.*/
+h3 {
+    font-size: 1.75em;
+    margin: 2% 0% 0%;
+    padding: 0%;
+}
+
+/* h4 is used as the header for individual portfolio items */
+h4 {
+    margin: 2% 0% 0%;
+    padding: 0;
+    font-size: 1.25em;
+}
+
+.portfolio-blurb { /* This clas is used for the paragraph elements within each portfolio item. */
+    font-size: 1em;
+    padding: 0;
+    margin: 2% 0%;
+    color:#464646;
+}
+
+
+a{ /*Specify default setting for links. Grey with no underline.*/
+    color: #7B7D7D;
+    text-decoration: none;
+}
+
+a:hover{ /*Specify style settings for hovering on text links*/
+    color: black;
+    text-shadow: 0.5px 0.5px; /*I really liked how a very slight text shadow looked on my hovered links, from w3-schools: https://www.w3schools.com/cssref/css3_pr_text-shadow.asp */
+}
+
+/* *** DELIVERABLE - RESPONSIVE STYLING */
+/*Sets up generic flexboxes to wrap. Because almost all of my flexbox implementations wrap, I created just one class to use across most implementations.*/
+.wrap-flex{ /*All flexbox implementations based on w3schools flexbox guide: https://www.w3schools.com/css/css3_flexbox.asp. Some of my flexboxes are set to wrap, for the purposes of responsive design, while others are set to simply row, where I did not want layout to change across devices.*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* || Specific Subsection styling 
+NOTE: *** RESPONSIVE STYLING: For each section below, the default styling is set up for a mobile browser, with @media rules called to make the necessary changes for desktop/landscape screens.
+This 'Mobile First' design is to improve loading times for mobile users, per w3schools suggestion: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
+/* ||| Header bar styling */
+
+/* This section sets up formatting for my title (name) and navbar. */
+header {
+    height: 150px;
+    margin-bottom: 60px; /*Bottom margin added for mobile only to give my navbar some distance from the subsequent elements */
+}
+/* *** DELIVERABLE - RESPONSIVE STYLING */
+.header-flex-left, .header-flex-right { /*Flexboxes for my name and navbar, set up so that they will stack on one another for mobile browsers. The use of flex-wrap with differently sized flex-boxes at specific media breakpoints for responsive design derived from w3schools: https://www.w3schools.com/css/css3_flexbox_responsive.asp */
+    flex: 100%;
+    align-self: center;
+}
+
+/* *** DELIVERABLE - NAVBAR STYLING */
+.navbar-list { /* Here I set up my navbar as a flexbox list with no bullets, no margin and padding (to remove default browser settings), per w3Schools recommendation: https://www.w3schools.com/css/css_navbar.asp. */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.75em;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; /* I set the line height here to be the same as the element height because my list elements contain multiple sizes of text, and this aligns them horizontally. */
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Setting justify-content and align-items to center centers my flexboxes in mobile view */
+    align-items: center;
+}
+
+/* Regarding the above, I wanted my mobile navbar to be centered, which was surprisingly difficult to do using w3School's recommended float-based navbar, as float can only be assigned to left or right.
+I tried a number of solutions but found the simplest and most robust was just to build my navbar using a list with flexbox properties, which allows the "align-items: center" declaration. 
+Part credit for this realization goes to stack overflow thread for making me realize the way over-complicted solution to getting my list aligned and ordered properly would be much simpler if I just used flexbox:
+https://stackoverflow.com/questions/39217732/is-it-possible-to-change-the-order-of-list-items-using-css3 I didn't end up needing the solution discussed in this thread, because
+flexboxes let me avoid the issue this thread would solve in the first place! Actual flexbox properties including justify-content and align-items from w3schools flex container page: https://www.w3schools.com/css/css3_flexbox_container.asp*/
+
+.navbar-link { /*This class provides some spacing between my navbar items.*/
+    padding: 10px;
+}
+
+.navbar-divider{ /*This class sets the font size for the slash I use to divide my navbar items to be slightly larger than the font size of other list items.*/
+    font-size: 1.5em
+}
+
+#active{ /* I added an active id for the navbar link to the current page, to improve clarity. */
+    font-weight: bold;
+    color: black;
+}
+
+#active:hover{
+    text-shadow: 0px 0px; /*I also removed the text-shadow from the hover state for the active navbar link */
+}
+
+/* *** DELIVERABLE - RESPONSIVE STYLING */
+@media only screen and (min-width: 768px) { /* For Desktop and landscape tablets. min-width value derived from w3schools suggestion (https://www.w3schools.com/css/css_rwd_mediaqueries.asp). */
+    header{
+        margin-bottom: 0;
+    }
+    .header-flex-left {  /*Styling set up so that my navbar and name will appear on the same line for desktop screens, based on https://www.w3schools.com/css/css3_flexbox_responsive.asp */
+        flex: 50%;
+        justify-content: left;
+    } 
+    .header-flex-right { 
+      flex: 50%;
+      justify-content: right;
+    }
+  }
+
+
+
+
+/* ||| Introduction styling */
+
+
+p.topline{ /* This is the text styling for my introductory, top line paragraph*/
+    font-size: 1.75em;
+}
+ /* *** DELIVERABLE - UNIQUE IMAGE STYLING */
+img.portrait{ /* This gives my personal photo a nice border, and limits its maximum size to not increase past either the edges of the flexbox that contains it our its resolution.*/
+    border-radius: 50%;
+    max-width:100%; /* Setting max width to 100% and height to auto for this image from w3schools suggestions for responsive images: https://www.w3schools.com/css/css3_images.asp. This page was also the source for my idea of setting a border-radus for this image. */
+    height: auto;
+}
+
+/* This section sets up the flexboxes for my topline summary and headshot. They will stack vertically on mobile devices, and horizontally on desktop devices. */
+/* *** DELIVERABLE - RESPONSIVE STYLING */
+.topline-flex-left{ /*flexbox for my introductory paragraph */
+    flex:100%;
+}
+
+.topline-flex-right{ /*flexbox for my headshot*/
+    flex:100%;
+}
+
+/* *** DELIVERABLE - RESPONSIVE STYLING */
+@media only screen and (min-width: 768px) { /* For Desktop and landscape tablets. min-width value derived from w3schools suggestion (https://www.w3schools.com/css/css_rwd_mediaqueries.asp). */
+    .topline-flex-left{ 
+        flex: 60%;
+    } 
+    .topline-flex-right { 
+      flex: 35%;
+    }
+    p.topline{
+        margin-right: 5%; /* Added to keep my image from getting too close to my text on landscape screens. */
+    }
+  }
+
+
+
+/* ||| Resume and education section */
+
+.resume{ /* I set up my resume section as a bullet-less list, and define the general formatting here. */
+    list-style-type: none;
+    font-size: 1.25em;
+    line-height: 110%;
+    padding: 0%;
+    margin: 0%;
+
+}
+
+/* This padding gives some distance between my resume bullet points.*/
+.resume-item{
+    padding: 1.5% 0%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .resume{ /* Here I set the font-size of this section to be larger just on desktop devices, because I found keeping the text large for mobile devices too caused the list elements to look unwieldy.*/
+        font-size: 1.5em;
+    }
+}
+
+/* *** DELIVERABLE - RESPONSIVE STYLING */
+/* This section sets up the flexboxes for the education section of my webpage. I wanted the degree title and institution name to be on different lines for mobile, to improve clarity.*/
+.education-flex-left{ /*Flexbox for degree title*/
+    flex:100%;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.education-flex-right{ /*Flexbox for institution*/
+    flex:100%;
+    text-align: right;
+    color: #464646;
+    margin: 2% 0; /*Added a very small margin to the top of these because they were too close to the text above on mobile. */
+    font-size: 1.5rem;
+}
+
+/* *** DELIVERABLE - RESPONSIVE STYLING */
+@media only screen and (min-width: 768px) { /* This keeps the institution and degree on the same line for Desktop and landscape tablets.*/
+    .education-flex-left{ 
+        flex: 60%;
+    } 
+    .education-flex-right { 
+      flex: 40%;
+      margin: 0;
+    }
+  }
+
+
+
+/*  ||| Footer styling */
+
+footer{ /*This flexbox lets me stack my portfolio just above my external social links. */
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottomnav { /*This styling sets up a navigation link to my site's other page at the bottom of my resume. */
+    margin-top: 5%;
+    margin-bottom: 0%;
+    padding: 0;
+    font-size: 1.75em;
+    height: 40px;
+    text-align: right;
+    width: 100%;
+}
+
+#aboutnav { /*This ID is to easily set the bottom nav link on my portfolio page to align to the left instead of the right, to give a sense of direction within the site. */
+    text-align: left;
+}
+
+img.socials{  /* *** DELIVERABLE - UNIQUE IMAGE STYLING */
+    max-width: 100%; /* Setting max width to 100% and height to auto for this image from w3schools suggestions for responsive images: https://www.w3schools.com/css/css3_images.asp.*/
+    height: auto;
+    transition: opacity 0.25s; /* w3Schools showed me that I can add transitions to make for more smooth hover states: https://www.w3schools.com/cssref/css3_pr_transition.asp */
+}
+
+/* This stackoverflow thread showed me that the hover state could be controlled in image tags, not just links: https://stackoverflow.com/questions/18813299/changing-image-on-hover-with-css-html */
+.socials:hover{
+    opacity: 60%;
+}
+
+/* Below I use flex boxes to set up my two external links - to my LinkedIn and Twitter pages. I used Twitter and LinkedIn icons for these images.*/
+.flex-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+/* I thought the child selector was a really cool way to select divs within a particular flexbox when all the divs
+will have the same properties, from w3schools: https://www.w3schools.com/css/css_combinators.asp */
+.flex-socials > div{
+    width: 30px;
+    margin: 10px;
+}
+
+
+
+
+/* || Portfolio Tile Design */
+
+
+/* Initialize flex setup for portfolio page. I set this up to be one column for mobile and two columns for desktop. */
+/* *** DELIVERABLE - RESPONSIVE STYLING */
+.flex-portfolio {
+    flex: 100%;
+    justify-content: center;
+    margin: 2% 5%;
+}
+
+@media only screen and (min-width: 768px) { /*Portfolio flex box styling for desktop. */
+    .flex-portfolio{
+        flex: 40%;
+        max-width: 40%;
+    }
+}
+
+ /* *** DELIVERABLE - UNIQUE IMAGE STYLING */
+.portfolioimg { /*This class is for the images in my portfolio. It sets them up to scale responsively and never grow beyond their resolution.*/
+    max-width: 100%; /* Setting max width to 100% and height to auto for this image from w3schools suggestions for responsive images: https://www.w3schools.com/css/css3_images.asp. */
+    height: auto;
+    transition: filter 0.3s; /*As with my social images, this transition makes the filter effect appear gradually, which feels much smoother, from w3schools: https://www.w3schools.com/cssref/css3_pr_transition.asp */
+}
+
+.portfolioimg:hover {
+    filter: contrast(120%); /* This gives a very slight contrast effect on hover, which causes the image to draw the attention a little more. */
+}
+
+ /* *** DELIVERABLE - UNIQUE IMAGE STYLING */
+.portfolioimgbright { /*I found it difficult to find an amount of contrast for my hover effect that worked well on both dark and light images. As a work around I added this class for brighter images, so I could apply less contrast.*/
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.3s; 
+}
+
+.portfolioimgbright:hover {
+    filter: contrast(110%);
+}

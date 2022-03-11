@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <!--Establish title page and meta info tags, including viewport tag for responsive elements.-->
+        <title>Ridley Soudack's Portfolio</title>
+        <meta charset='utf-8'>
+        <meta name="author" content="Ridley Soudack">
+        <meta name="keywords" content="GIS, ESRI, Cartography">
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+        <!--Link to stylesheet, and link stylesheet for google font usage-->
+        <link rel ='stylesheet' href='https://fonts.googleapis.com/css?family=Amiri'>
+        <link rel='stylesheet' href='styles.css'>
+    </head>
+    <body>
+        <header class='wrap-flex'> <!--This header element is a flexbox container that contains my site title (my name) and my navbar. More details on the styling and reference for these in my CSS comments.-->
+            <div class='header-flex-left'> <!-- This flexbox contains my site title-->
+            <h1> <!--I used h1 for my website title-->
+                Ridley Soudack
+            </h1>
+            </div>
+            <div class = 'header-flex-right'> <!--This flexbox contains my navbar-->
+                <ul class = 'navbar-list'> <!-- *** DELIVERABLE - NAVBAR STYLING: This list is set up as my navbar, per w3schools. More information on styling in CSS comments.-->
+                    <li>
+                        <a class='navbar-link' href='index.html'>About Me</a> <!--This link links to my other page.-->
+                    </li>
+                    <li class = 'navbar-divider'>
+                        /
+                    </li>
+                    <li>
+                        <a class='navbar-link'  id = 'active' href = 'portfolio.html'>Portfolio</a> <!--This link is the button for my current page.-->
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class= 'wrap-flex'> <!-- The tile-layout for this page is based on the portfolio page of Caitlyn Wolters, http://www.caitlinwolters.com/portfolio but the code is entirely my own.-->
+            <article class = 'flex-portfolio'> <!--This article block contains my first portfolio item. For web app portfolio items such as this one , I would love to eventually add in buttons that link to the apps themselves as in the example linked above example, but ran out of time.-->
+                <a href = 'images/houstonfull.png'> <!-- This link links to a fullsize of the map featured in the embedded image. I got the idea for close-up images of map details that link out to full-size images after checking out Daniel Huffman's portfolio page, https://somethingaboutmaps.com/Portfolio (although Huffman does this slightly differently) -->
+                    <img class='portfolioimg' src = 'images/houstonthumb.png' alt='Houston map'> <!-- *** DELIVERABLE - UNIQUE IMAGE 4: This image is a close-up of my first portfolio item. -->
+                </a>
+                <h4> <!--h4 is used as the title for each individual portfolio item. The set up for each of the portfolio items is largely the same. -->
+                    Houston Evacuation Map
+                </h4>
+                <p class = 'portfolio-blurb'> <!--This paragraph class is for blurbs for each portfolio item. -->
+                    This app shows evacuation routes and demographic data by census tract for Houston, Texas. 
+                    This pattern helps answer the question: Where in Houston should we provide evacuation assistance during a hurricane? 
+                </p>
+            </article>
+            <article class = 'flex-portfolio'> <!--This article block contains my second portfolio item, structured in the same manner as the first. -->
+                <a href = 'images/portlandfull.png'> 
+                    <img class='portfolioimg' src = 'images/portlandthumb.png' alt='Portland map'>  <!-- *** DELIVERABLE - UNIQUE IMAGE 5 -->
+                </a>
+                <h4>
+                    Portland Central Business District
+                </h4>
+                <p class = 'portfolio-blurb'> 
+                    A black and white map of downtown Portland, developed as I learned basic principles of cartographic design.
+                </p>
+            </article>
+            <article class = 'flex-portfolio'> <!--This article block contains my third portfolio item, structured in the same manner as the first. -->
+                <a href = 'images/torontofull.png'>
+                    <img class='portfolioimgbright' src = 'images/torontothumb.png' alt='Toronto map'> <!-- *** DELIVERABLE - UNIQUE IMAGE 6 -->
+                </a>
+                <h4>
+                    Toronto Parking Ticket Hotspots
+                </h4>
+                <p class = 'portfolio-blurb'> 
+                    This map shows the top 20 addresses for parking violations in Toronto Ontario, created as part of a database management assignment.
+                </p>
+            </article>
+        </div>
+        <footer> <!--This footer block contains another navigation button, my external links, to my Twitter and LinkedIn pages.-->
+            <p class='bottomnav' id='aboutnav'>
+                <a href='index.html' title='About Me'>&lt; About me</a> <!-- This link returns to my index page. Encoding the less than sign I use as an arrow here to prevent any html errors.  -->
+            </p>
+            <div class='flex-socials'>
+                <div><!--- *** DELIVERABLE - EXTERNAL LINK 1: This div contains an image which links to my LinkedIn, with target=_blank to open in a new tab (per w3schools: https://www.w3schools.com/tags/att_a_target.asp).-->
+                    <a href='https://www.linkedin.com/in/ridley%2Dsoudack%2D1757081b4/' target='_blank' title='LinkedIn'> <!--Please note that this link is encoded properly, but some browsers seem to automatically un-encode the dashes.-->
+                        <img class='socials' src='images/LinkedIn.png' alt='LinkedIn'> <!--Image sourced from LinkedIn brand toolkit: https://brand.linkedin.com/downloads -->
+                    </a>
+                </div>
+                <div> <!--- *** DELIVERABLE - EXTERNAL LINK 2: This div contains an image which links to my Twitter, with target=_blank to open in a new tab.-->
+                    <a href='https://twitter.com/RidleySoudack' target='_blank' title='Twitter'>
+                    <img class='socials' src='images/Twitter.png' alt='Twitter'> <!--Image sourced from Twitter brand toolkit: https://about.twitter.com/en/who-we-are/brand-toolkit -->
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
