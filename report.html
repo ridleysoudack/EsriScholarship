@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+         <!--Establish title page and meta info tags, including viewport tag for responsive elements. w3schools reference: https://www.w3schools.com/html/html_head.asp -->
+        <!--NOTE: All intsances of 4 chosen additional site items marked throughout in comments. To find easily, search for ***, which marks where the code for each-->
+        <title>Ridley Soudack</title>
+        <meta charset='utf-8'>
+        <meta name="author" content="Ridley Soudack">
+        <meta name="keywords" content="GIS, ESRI, Cartography">
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+        <!--Link to stylesheet, and link stylesheet for google font usage (from w3schools: https://www.w3schools.com/css/css_font_google.asp)-->
+        <link rel ='stylesheet' href='https://fonts.googleapis.com/css?family=Amiri'>
+        <link rel='stylesheet' href='styles.css'>
+    </head>
+    <body>
+        <header class='wrap-flex'> <!--This header element is a flexbox container that contains my site title (my name) and my navbar. More details on the styling and reference for these in my CSS comments.-->
+            <div class='header-flex-left'> <!-- This flexbox contains my site title-->
+            <h1> <!--I used h1 for my website title-->
+                Ridley Soudack
+            </h1>
+            </div>
+            <div class = 'header-flex-right'> <!--This flexbox contains my navbar-->
+                <ul class = 'navbar-list'><!-- *** DELIVERABLE - NAVBAR STYLING: This list is set up as my navbar, per w3schools. More information on styling and reference in CSS comments.-->
+                    <li> <!--This list item is my first navbar link.-->
+                        <a class='navbar-link' href='index.html'>Home</a> <!--This link is the button for my current page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li> <!--This list item is my second navbar link.-->
+                        <a class='navbar-link' href = 'resume.html'>Resume</a> <!--This link links to my other page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li> <!--This list item is my third navbar link.-->
+                        <a class='navbar-link' id = 'active' href = 'report.html'>Esri Report</a> <!--This link links to my other page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li> <!--This list item is my third navbar link.-->
+                        <a class='navbar-link' href = 'portfolio.html'>Portfolio</a> <!--This link links to my other page.-->
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class='topline'>
+            <h2>New Horizons with Esri</h2>
+            <p class='letter'>
+                Through the last six months of my time at Fleming, and my time working with Esri software, I have had the wonderful experience of a sense of vertigo turned excitement at the vast possibility space afforded by Esri's range of applications and tools. From spatial analysis to environmental modeling, geometric correction to complex geoprocessing scripting, and the near limitless potential of web GIS, Esri software has amazed me with the range of options in the Esri-grounded analyst's toolset, and the potential they offer to a creative, experienced user. My journey with Esri is ongoing, and today I only feel like I have more to learn than I did when I created my first ArcGIS Pro Project, but below I have outlined my experience and learnings with the software so far.
+            </p>
+            <h3>Spatial Modeling and Analysis</h3>         
+            <p class='letter'>
+                While at Fleming, I have become comfortable with a range of spatial analysis and modeling operations in ArcGIS Pro and ArcGIS Desktop, working with both vector and raster data. I have performed both Boolean and weighted overlay analyses, including a site suitability report for drought-fighting fog harvesters in California's struggling agricultural regions. I have practiced a range of environmental modeling workflows, including exploring DEM creation using the Spatial Analyst extension's interpolation tools, and creating hydrological networks with both Spatial Analyst and ArcHydro. I have employed topology, linear referencing, geocoding, and network and regression analysis tools with ArcGIS Pro, most notably as part of an ongoing spatial analysis project to explore the distribution of Community Recreation Centres in Toronto, Canada.            
+            </p>
+            <h3>Cartographic Work</h3>         
+            <p class='letter'>
+                Beyond analytic work, across my coursework I have had the opportunity to explore the power of Esri software in producing cartographic output. Using ArcGIS Pro and Arc Map, I have produced both general purpose and thematic maps for web and print use. Leveraging the power of ArcGIS Pro's symbology and labelling functionality, I have produced a range of maps depicting both qualitative and quantitative data, such as the Land Use Map of Nagoya, Japan included in my portfolio. I also have experience working with ArcGIS Scenes, applying custom DEMs to create 3D surfaces and enhance display of imagery. Furthermore, through ArcGIS Online's Map Viewer, the ArcGIS Web AppBuilder, and the ArcGIS API for Javascript, I have created a number of stylized interactive web maps and applications, including an interactive tour of the Canadian provinces aimed at elementary school children.
+            </p>
+            <h3>Scripting and Geoprocessing</h3>         
+            <p class='letter'>
+                I have worked to develop scripts that extend and automate the functionality of ArcGIS Pro's geoprocessing, feature creation, and symbolization options. I have created script tools that can be imported into ArcGIS Pro toolboxes to facilitate sharing and reusability. I have also developed standalone scripts designed to be run directly by the user and return text output based on geoprocessing operations, notably including a script that performs an overlay analysis on user-supplied coordinates for a location in California and returns calculated risks of wildfire, earthquake, and flooding for the given location.
+            </p>
+            <h3>Data Management and Sharing</h3>         
+            <p class='letter'>
+                I have used ArcGIS Pro to develop an understanding of best practices for storage and sharing of GIS data, including deploying cohesive and effective file geodatabases that use domains, subtypes, attribute rules, and contingent values to enforce data integrity and reduce the likelihood of data entry errors. Taking GIS data online, I have published data to and accessed data from an instance of ArcGIS Server on a personally managed AWS EC2 instance. Using Esri's REST Services and ArcGIS Online, I have prepared and shared spatial data for use in web applications and maps.
+            </p>
+            </div>
+        <footer> <!--This footer block contains another navigation button, my external links, to my Twitter and LinkedIn pages.-->
+            <p class='bottomnav'>
+                <a href='resume.html' title='Resume'>&lt; Resume</a>
+                <a href='portfolio.html' title='Portfolio' id="rightnav">Portfolio &gt;</a>  
+            </p>
+        </footer>
+    </body>
+</html>

@@ -10,6 +10,7 @@
         <!--Link to stylesheet, and link stylesheet for google font usage-->
         <link rel ='stylesheet' href='https://fonts.googleapis.com/css?family=Amiri'>
         <link rel='stylesheet' href='styles.css'>
+        <script defer src="javascript.js" onload='showSlides(slideIndex)'></script>
     </head>
     <body>
         <header class='wrap-flex'> <!--This header element is a flexbox container that contains my site title (my name) and my navbar. More details on the styling and reference for these in my CSS comments.-->
@@ -19,71 +20,103 @@
             </h1>
             </div>
             <div class = 'header-flex-right'> <!--This flexbox contains my navbar-->
-                <ul class = 'navbar-list'> <!-- *** DELIVERABLE - NAVBAR STYLING: This list is set up as my navbar, per w3schools. More information on styling in CSS comments.-->
-                    <li>
-                        <a class='navbar-link' href='index.html'>About Me</a> <!--This link links to my other page.-->
+                <ul class = 'navbar-list'><!-- *** DELIVERABLE - NAVBAR STYLING: This list is set up as my navbar, per w3schools. More information on styling and reference in CSS comments.-->
+                    <li> <!--This list item is my first navbar link.-->
+                        <a class='navbar-link' href='index.html'>Home</a> <!--This link is the button for my current page.-->
                     </li>
-                    <li class = 'navbar-divider'>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
                         /
                     </li>
-                    <li>
-                        <a class='navbar-link'  id = 'active' href = 'portfolio.html'>Portfolio</a> <!--This link is the button for my current page.-->
+                    <li> <!--This list item is my second navbar link.-->
+                        <a class='navbar-link' href = 'resume.html'>Resume</a> <!--This link links to my other page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li> <!--This list item is my third navbar link.-->
+                        <a class='navbar-link' href = 'report.html'>Esri Report</a> <!--This link links to my other page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li> <!--This list item is my third navbar link.-->
+                        <a class='navbar-link' id = 'active' href = 'portfolio.html'>Portfolio</a> <!--This link links to my other page.-->
                     </li>
                 </ul>
             </div>
         </header>
-        <div class= 'wrap-flex'> <!-- The tile-layout for this page is based on the portfolio page of Caitlyn Wolters, http://www.caitlinwolters.com/portfolio but the code is entirely my own.-->
-            <article class = 'flex-portfolio'> <!--This article block contains my first portfolio item. For web app portfolio items such as this one , I would love to eventually add in buttons that link to the apps themselves as in the example linked above example, but ran out of time.-->
-                <a href = 'images/houstonfull.png'> <!-- This link links to a fullsize of the map featured in the embedded image. I got the idea for close-up images of map details that link out to full-size images after checking out Daniel Huffman's portfolio page, https://somethingaboutmaps.com/Portfolio (although Huffman does this slightly differently) -->
-                    <img class='portfolioimg' src = 'images/houstonthumb.png' alt='Houston map'> <!-- *** DELIVERABLE - UNIQUE IMAGE 4: This image is a close-up of my first portfolio item. -->
-                </a>
-                <h4> <!--h4 is used as the title for each individual portfolio item. The set up for each of the portfolio items is largely the same. -->
-                    Houston Evacuation Map
-                </h4>
-                <p class = 'portfolio-blurb'> <!--This paragraph class is for blurbs for each portfolio item. -->
-                    This app shows evacuation routes and demographic data by census tract for Houston, Texas. 
-                    This pattern helps answer the question: Where in Houston should we provide evacuation assistance during a hurricane? 
-                </p>
-            </article>
-            <article class = 'flex-portfolio'> <!--This article block contains my second portfolio item, structured in the same manner as the first. -->
-                <a href = 'images/portlandfull.png'> 
-                    <img class='portfolioimg' src = 'images/portlandthumb.png' alt='Portland map'>  <!-- *** DELIVERABLE - UNIQUE IMAGE 5 -->
-                </a>
-                <h4>
-                    Portland Central Business District
-                </h4>
-                <p class = 'portfolio-blurb'> 
-                    A black and white map of downtown Portland, developed as I learned basic principles of cartographic design.
-                </p>
-            </article>
-            <article class = 'flex-portfolio'> <!--This article block contains my third portfolio item, structured in the same manner as the first. -->
-                <a href = 'images/torontofull.png'>
-                    <img class='portfolioimgbright' src = 'images/torontothumb.png' alt='Toronto map'> <!-- *** DELIVERABLE - UNIQUE IMAGE 6 -->
-                </a>
-                <h4>
-                    Toronto Parking Ticket Hotspots
-                </h4>
-                <p class = 'portfolio-blurb'> 
-                    This map shows the top 20 addresses for parking violations in Toronto Ontario, created as part of a database management assignment.
-                </p>
-            </article>
-        </div>
-        <footer> <!--This footer block contains another navigation button, my external links, to my Twitter and LinkedIn pages.-->
-            <p class='bottomnav' id='aboutnav'>
-                <a href='index.html' title='About Me'>&lt; About me</a> <!-- This link returns to my index page. Encoding the less than sign I use as an arrow here to prevent any html errors.  -->
-            </p>
-            <div class='flex-socials'>
-                <div><!--- *** DELIVERABLE - EXTERNAL LINK 1: This div contains an image which links to my LinkedIn, with target=_blank to open in a new tab (per w3schools: https://www.w3schools.com/tags/att_a_target.asp).-->
-                    <a href='https://www.linkedin.com/in/ridley%2Dsoudack%2D1757081b4/' target='_blank' title='LinkedIn'> <!--Please note that this link is encoded properly, but some browsers seem to automatically un-encode the dashes.-->
-                        <img class='socials' src='images/LinkedIn.png' alt='LinkedIn'> <!--Image sourced from LinkedIn brand toolkit: https://brand.linkedin.com/downloads -->
-                    </a>
-                </div>
-                <div> <!--- *** DELIVERABLE - EXTERNAL LINK 2: This div contains an image which links to my Twitter, with target=_blank to open in a new tab.-->
-                    <a href='https://twitter.com/RidleySoudack' target='_blank' title='Twitter'>
-                    <img class='socials' src='images/Twitter.png' alt='Twitter'> <!--Image sourced from Twitter brand toolkit: https://about.twitter.com/en/who-we-are/brand-toolkit -->
-                    </a>
-                </div>
+        <h2 id='present'> <!-- Present projects page (1/2 pages on this page)-->
+            Recent Projects
+          </h2>
+          <div class='present-portfolio'> <!-- This div contains the slideshow for the 'Present Projects' section of our slideshow-->
+            <div class='project-slideshow'> <!-- This div contains images and buttons for the slideshow-->
+              <div class='slide fade'> <!-- Each of these slide divs contains a discrete slide-->
+                <img class='slide-img-hover' src='images/portfolio/NagoyaCloseUp.png' alt='Nagoya Map Closeup'> <!-- This image is a version of the image below with a Sobel filter applied with PCI Catalyst -->
+                <img class='slide-img-reg' src='images/portfolio/NagoyaWide.jpg' alt='Nagoya Map'> <!--Images sourced from ArtHouse Studio: https://www.pexels.com/photo/old-map-of-iceland-on-wall-4338273/ -->
+              </div>
+              <div class='slide fade'>
+                <img class='slide-img-hover' src='images/portfolio/FogCloseUp.png' alt='Image of Io'> <!-- Images courtesy of Victor Toth, from previous project work. -->
+                <img class='slide-img-reg' src='images/portfolio/FogMap.png' alt='Io Spectral Analysis'> <!--Images sourced from NASA: https://www.nasa.gov/planetarymissions/io-volcano-observer -->
+              </div>
+              <div class='slide fade'>
+                <img class='slide-img-hover' src='images/portfolio/orchardfadev2.png' alt='Orchard DEM Image'> <!-- Images courtesy of Victor Toth, from previous project work. -->
+                <img class='slide-img-reg' src='images/portfolio/orchardinit.png' alt='Orchard Image'> <!-- Image courtesy of Victor Toth, from previous project work. -->
+              </div>
+              <div class='slide fade'>
+                <img class='slide-img-hover' src='images/portfolio/orchardfadev2.png' alt='Orchard DEM Image'> <!-- Images courtesy of Victor Toth, from previous project work. -->
+                <img class='slide-img-reg' src='images/portfolio/orchardinit.png' alt='Orchard Image'> <!-- Image courtesy of Victor Toth, from previous project work. -->
+              </div>
+              <!--Next and Previous Buttons, and navigation dots. These are positioned on top of the slide images. The javascript functions change the slide being displayed-->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              <div class='dot-box'>
+                <span class='dot' onclick="currentSlide(1)"></span>
+                <span class='dot' onclick="currentSlide(2)"></span>
+                <span class='dot' onclick="currentSlide(3)"></span>
+                <span class='dot' onclick="currentSlide(4)"></span>
+              </div>
             </div>
+            <div class='portfolio-blurb'> <!-- This div contains the blurbs associated with the slideshow.-->
+              <div class='project-title fade'> <!-- Each blurb contains a title div, as well as more information on each project.-->
+                Nagoya - An Alternative Approach to City Zoning
+              </div>
+              <p class='fade'>
+               This map, created as my culminating Geovisualization project, was designed to demonstrate the Japanese approach to urban zoning, and the ways in which it encourages walkable, community-focused cities. It was created in ArcGIS Pro using resources from various Japanese governmental agencies and content from Esri Japan and Community Maps.
+              </p>
+              <a href="Files/NagoyaZoning.pdf" target="_blank">Map PDF</a>
+            </div>
+            <div class='portfolio-blurb'> <!-- This div contains the blurbs associated with the slideshow.-->
+                <div class='project-title fade'> <!-- Each blurb contains a title div, as well as more information on each project.-->
+                  Salvation in the Air
+                </div>
+                <p class='fade'>
+                 This poster is the output of a site-suitability analysis for fog harvesting devices in the drought-ridden Kern County, California. Fog harvesting offers an environmentally friendly approach to drought-mitigation in agriculture. This suitability analysis makes use of a DEM created from Kern County Contour Data.
+                </p>
+                <a href="Files/KernCountyFogHarvesting.pdf" target="_blank">Poster PDF</a>
+              </div>
+              <div class='portfolio-blurb'> <!-- This div contains the blurbs associated with the slideshow.-->
+                <div class='project-title fade'> <!-- Each blurb contains a title div, as well as more information on each project.-->
+                  Nagoya - An Alternative Approach to City Zoning
+                </div>
+                <p class='fade'>
+                 This map, created as my culminating Geovisualization project, was designed to demonstrate the Japanese approach to urban zoning, and the ways in which it encourages walkable, community-focused cities. It was created in ArcGIS Pro using resources from various Japanese governmental agencies and content from Esri Japan and Community Maps.
+                </p>
+                <a href="Files/NagoyaZoning.pdf" target="_blank">Map PDF</a>
+              </div>
+              <div class='portfolio-blurb'> <!-- This div contains the blurbs associated with the slideshow.-->
+                <div class='project-title fade'> <!-- Each blurb contains a title div, as well as more information on each project.-->
+                  Nagoya - An Alternative Approach to City Zoning
+                </div>
+                <p class='fade'>
+                 This map, created as my culminating Geovisualization project, was designed to demonstrate the Japanese approach to urban zoning, and the ways in which it encourages walkable, community-focused cities. It was created in ArcGIS Pro using resources from various Japanese governmental agencies and content from Esri Japan and Community Maps.
+                </p>
+                <a href="Files/NagoyaZoning.pdf" target="_blank">Map PDF</a>
+              </div>
+          </div>
+        <footer> <!--This footer block contains another navigation button, my external links, to my Twitter and LinkedIn pages.-->
+            <p class='bottomnav'>
+                <a href='report.html' title='Esri Report'>&lt; Esri Report</a> <!-- This link returns to my index page. Encoding the less than sign I use as an arrow here to prevent any html errors.  -->
+            </p>
         </footer>
     </body>
 </html>

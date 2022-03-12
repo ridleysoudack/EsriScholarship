@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+         <!--Establish title page and meta info tags, including viewport tag for responsive elements. w3schools reference: https://www.w3schools.com/html/html_head.asp -->
+        <!--NOTE: All intsances of 4 chosen additional site items marked throughout in comments. To find easily, search for ***, which marks where the code for each-->
+        <title>Ridley Soudack</title>
+        <meta charset='utf-8'>
+        <meta name="author" content="Ridley Soudack">
+        <meta name="keywords" content="GIS, ESRI, Cartography">
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+        <!--Link to stylesheet, and link stylesheet for google font usage (from w3schools: https://www.w3schools.com/css/css_font_google.asp)-->
+        <link rel ='stylesheet' href='https://fonts.googleapis.com/css?family=Amiri'>
+        <link rel='stylesheet' href='styles.css'>
+    </head>
+    <body>
+        <header class='wrap-flex'> <!--This header element is a flexbox container that contains my site title (my name) and my navbar. More details on the styling and reference for these in my CSS comments.-->
+            <div class='header-flex-left'> <!-- This flexbox contains my site title-->
+            <h1> <!--I used h1 for my website title-->
+                Ridley Soudack
+            </h1>
+            </div>
+            <div class = 'header-flex-right'> <!--This flexbox contains my navbar-->
+                <ul class = 'navbar-list'><!-- *** DELIVERABLE - NAVBAR STYLING: This list is set up as my navbar, per w3schools. More information on styling and reference in CSS comments.-->
+                    <li>
+                        <a class='navbar-link' href='index.html'>Home</a> <!--This link is the button for my current page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li>
+                        <a class='navbar-link' id = 'active' href = 'resume.html'>Resume</a> <!--This link links to my other page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li> 
+                        <a class='navbar-link' href = 'report.html'>Esri Report</a> <!--This link links to my other page.-->
+                    </li>
+                    <li class = 'navbar-divider'> <!--This list item is a visual divider for my navbar, and so has a different class, to allow different style settings.-->
+                        /
+                    </li>
+                    <li> 
+                        <a class='navbar-link' href = 'portfolio.html'>Portfolio</a> <!--This link links to my other page.-->
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <h2>
+            Profile
+        </h2>
+        <ul class="profile">
+            <li>
+                Experience exploring, preparing, and analyzing spatial data from a range of sources with ArcGIS Pro and ArcMap
+            </li>
+            <li>
+                Confident building scripts and models to extend ArcGIS Pro and ArcMap functionality
+            </li>
+            <li>
+                Experience managing, sharing, and presenting spatial data with ArcGIS Online, ArcGIS Server, and ArcGIS API for JavaScript
+            </li>
+            <li>
+                Comfortable working with Python, SQL, JavaScript, HTML, and CSS in GIS and web development workflows
+            </li>
+            <li>
+                Confident working collaboratively to produce GIS solutions, sharing work via GitHub and ArcGIS toolboxes
+            </li>
+            <li>
+                Trained in Agile development methodologies, completed ScrumMaster certification
+            </li>
+        </ul>
+        <h2> 
+            Work Experience
+        </h2>
+            <h3> <!--h3 is used to distinguish different job positions I have held.-->
+                Project Manager - Human Contact
+            </h3>
+            <ul class='resume'> <!--The resume list class is used for bullets within my work experience/education sections.-->
+                <li class='resume-item'> <!--Each resume list item here represents a different skill I developed at the stated position.-->
+                    Experience managing teams and projects for a rapidly-growing creative and events agency, working with clients such as Shoppers Drug Mart, Home Hardware, and Japan Tobacco International
+                </li>
+                <li class='resume-item'>
+                    Tradeshow manager for corporate conferences, responsible for sponsorship campaigns totalling over $900,000 in sponsor commitment
+                </li>
+                <li class='resume-item'>
+                    Confident working as primary project manager for creative projects, communicating with clients and managing project quoting and invoicing
+                </li>
+                <li class='resume-item'>
+                    Technical experience performing Google Analytics data analysis across a range of client platforms
+                </li>
+            </ul>
+            <h3> <!--h3 is used to distinguish different job positions I have held.-->
+                Manager - 'Favorites' Thai BBQ Restaurant
+            </h3>
+            <ul class='resume'> <!--The resume list class is used for bullets within my work experience/education sections.-->
+                <li class= 'resume-item'> <!--Each resume list item here represents a different skill I developed at the stated position.-->
+                    Responsible for daily business administration, including inventory tracking and staff scheduling
+                </li>
+                <li class = 'resume-item'>
+                    Designed and controlled system for tracking large party reservations and buyout events
+                </li>
+                <li class = 'resume-item'>
+                    Created and organized systems for the business' transition to takeout and patio dining, in the face of COVID-19
+                </li>
+                <li class = 'resume-item'>
+                    Awarded 'Best New Restaurant of 2019' by Toronto Life magazine                </li>
+            </ul>
+            <h3> <!--h3 is used to distinguish different job positions I have held.-->
+                English as a Second Language Teacher - Royal Ivy Academy
+            </h3>
+            <ul class='resume'> <!--The resume list class is used for bullets within my work experience/education sections.-->
+                <li class= 'resume-item'> <!--Each resume list item here represents a different skill I developed at the stated position.-->
+                    Taught a large class of kindergarten-aged ESL students, and developed a high level of English comprehension and literacy across the class
+                </li>
+                <li class = 'resume-item'>
+                    Designed and implemented a comprehensive curriculum for the 2018-19 school year.
+                </li>
+                <li class = 'resume-item'>
+                    Produced and directed a smash hit rendition of The Three Little Pigs.
+                </li>
+            </ul>
+        <h2> <!--h2 is used to distinguish the work experience and education sections-->
+            Education
+        </h2>
+        <ul class="resume"> <!--The resume list class is used for bullets within my work experience/education sections.-->
+            <li class='resume-item'>
+                <div class='wrap-flex'> <!--This flexbox div allows me to rearrange the text for my education section slightly on mobile screens.-->
+                    <p class='education-flex-left'>GIS Applications Specialist (Ongoing)</p>
+                    <p class='education-flex-right'>Fleming College, ON</p>
+                </div>
+            </li>
+            <li class='resume-item'>
+                <div class='wrap-flex'> <!--This flexbox div allows me to rearrange the text for my education section slightly on mobile screens.-->
+                    <p class='education-flex-left'>Bachelor of Arts - Sociology</p>
+                    <p class='education-flex-right'>Durham University, UK</p>
+                </div>
+            </li>
+            <li class='resume-item'>
+                <div class='wrap-flex'> <!--This flexbox div allows me to rearrange the text for my education section slightly on mobile screens.-->
+                    <p class='education-flex-left'>Certified ScrumMaster</p>
+                    <p class='education-flex-right'>Scrum Alliance</p>
+                </div>
+            </li>
+
+        </ul>
+        <footer> <!--This footer block contains another navigation button, my external links, to my Twitter and LinkedIn pages.-->
+            <p class='bottomnav'>
+                <a href='index.html' title='Home'>&lt; Home</a>
+                <a href='report.html' title='Esri Report' id="rightnav">Esri Report &gt;</a>  
+            </p>
+        </footer>
+    </body>
+</html>
