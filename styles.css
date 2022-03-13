@@ -158,10 +158,6 @@ p.letter{ /* This is the text styling for my introductory, top line paragraph*/
     margin: 0;
 }
 
-.salutation-end {
-    font-size: 1.5em;
-    margin: 0 0 0 40px;
-}
 
  /* *** DELIVERABLE - UNIQUE IMAGE STYLING */
 img.portrait{ /* This gives my personal photo a nice border, and limits its maximum size to not increase past either the edges of the flexbox that contains it our its resolution.*/
